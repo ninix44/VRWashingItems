@@ -1,7 +1,7 @@
 {
   "required": true,
-  "package": "your.mod.example.core.mixin",
-  "plugin": "your.mod.example.core.mixin.MixinConfig",
+  "package": "org.vmstudio.washingitems.core.mixin",
+  "plugin": "org.vmstudio.washingitems.core.mixin.MixinConfig",
   "compatibilityLevel": "JAVA_17",
   "client": [
   ],
