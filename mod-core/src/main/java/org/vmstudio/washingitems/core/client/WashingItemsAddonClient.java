@@ -1,33 +1,16 @@
 package org.vmstudio.washingitems.core.client;
 
-import org.vmstudio.visor.api.VisorAPI;
-import org.vmstudio.visor.api.common.addon.VisorAddon;
-import org.vmstudio.washingitems.core.client.overlays.VROverlayWashingItems;
-import org.vmstudio.washingitems.core.client.overlays.VROverlayTemplateWashingItems;
-import org.vmstudio.washingitems.core.common.VisorWashingItems;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-
-import java.util.List;
+import org.vmstudio.visor.api.common.addon.VisorAddon;
+import org.vmstudio.washingitems.core.common.AddonNetworking;
+import org.vmstudio.washingitems.core.common.VisorWashingItems;
 
 public class WashingItemsAddonClient implements VisorAddon {
     @Override
     public void onAddonLoad() {
-        VisorAPI.addonManager().getRegistries()
-                .overlays()
-                .registerComponents(
-                        List.of(
-                                new VROverlayWashingItems(
-                                        this,
-                                        VROverlayWashingItems.ID
-                                ),
-                                new VROverlayTemplateWashingItems(
-                                        this,
-                                        VROverlayTemplateWashingItems.ID
-                                )
-                        )
-                );
+        AddonNetworking.initCommon();
     }
 
     @Override

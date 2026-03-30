@@ -1,15 +1,16 @@
 package org.vmstudio.washingitems.core.server;
 
-import org.vmstudio.visor.api.common.addon.VisorAddon;
-import org.vmstudio.washingitems.core.common.VisorWashingItems;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
+import org.vmstudio.visor.api.common.addon.VisorAddon;
+import org.vmstudio.washingitems.core.common.AddonNetworking;
+import org.vmstudio.washingitems.core.common.VisorWashingItems;
 
 public class WashingItemsAddonServer implements VisorAddon {
     @Override
     public void onAddonLoad() {
-
+        AddonNetworking.initCommon();
     }
 
     @Override
